@@ -1,35 +1,36 @@
 import React from 'react'
 import './Home.css'
-import me from '../../assets/profile.jpg'
+import me from '../../assets/home.png'
 import { TypeAnimation } from 'react-type-animation';
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 const Home = () => {
 
-  useGSAP(()=>{
-    let tl1=gsap.timeline();
+  useGSAP(() => {
+    let tl1 = gsap.timeline();
     tl1.from(".line1", {
-      y:80,
-      duration:0.7,
-      opacity:0
+      y: 80,
+      duration: 0.7,
+      opacity: 0
     })
-     tl1.from(".line2", {
-      y:80,
-      duration:0.7,
-      opacity:0
-    }) 
+    tl1.from(".line2", {
+      y: 80,
+      duration: 0.7,
+      opacity: 0
+    })
     tl1.from(".line3", {
-      y:80,
-      duration:0.7,
-      opacity:0
-    }) 
+      y: 80,
+      duration: 0.7,
+      opacity: 0
+    })
     tl1.from(".righthome img", {
-      x:200,
-      duration:0.7,
-      opacity:0
+      x: 200,
+      duration: 0.7,
+      opacity: 0
     })
   })
+
   return (
     <div id='home'>
       <div className='lefthome'>
@@ -39,24 +40,47 @@ const Home = () => {
           <div className='line3'>
             <TypeAnimation
               sequence={[
-                'WEB DEVELOPER',        // types this
-                2000,                   // waits 2s
-                'SOFTWARE DEVELOPER',  
+                'WEB DEVELOPER',
                 2000,
-                'MERN STACK DEVELOPER', 
+                'SOFTWARE DEVELOPER',
                 2000,
-                'JAVA DEVELOPER',      
+                'MERN STACK DEVELOPER',
+                2000,
+                'JAVA DEVELOPER',
                 2000,
               ]}
               wrapper="span"
-              speed={50}              // typing speed
-              repeat={Infinity}       // loop forever
-              cursor={true}           // show blinking cursor
+              speed={50}
+              repeat={Infinity}
+              cursor={true}
             />
           </div>
-          <button>HIRE ME</button>
+
+          {/* Buttons */}
+          <div className="about-buttons">
+            <a href="/Ashvini.pdf" className="btn download">
+              Download CV
+            </a>
+            <a href="#projects" className="btn projects">
+              View Projects
+            </a>
+          </div>
+
+          {/* Social Links */}
+          <div className="social-links">
+            <a href="https://www.linkedin.com/in/ashvini-tayde-2a9b85226" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/AshviniTayde" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="mailto:ashvinit11@gmail.com">
+              <i className="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
+
       <div className='righthome'>
         <img src={me} alt='' />
       </div>

@@ -8,5 +8,7 @@
   font-family: "Poppins",sans-serif;
 }
 body{
-  background-color: rgb(29, 34, 38);
+  /* background-color: rgb(29, 34, 38); */
+  background: linear-gradient(to left, #53a7eb, #2c2f33);
 }
+

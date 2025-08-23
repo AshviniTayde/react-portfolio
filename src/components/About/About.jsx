@@ -1,132 +1,70 @@
-import React from 'react'
-import './About.css'
-import Card from '../Card/Card'
-import mern from '../../assets/mern.png'
-import dsa from '../../assets/dsa.png'
-import java from '../../assets/java.jpg'
+import React from "react";
+import "./About.css";
+import me from "../../assets/profile.jpg"; // your profile image
+import { TypeAnimation } from 'react-type-animation';
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
+import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  useGSAP(()=>{
-    gsap.from(".circle", {
-      x:-100,
-      duration:1,
+ useGSAP(()=>{
+  
+    gsap.from(".about-image img", {
+      x:200,
+      duration:0.7,
       opacity:0,
-      stagger:1,
       scrollTrigger:{
-        trigger:".circle",
+        trigger:".about-image img",
         scroll:'body',
         scrub:2,
         start:"top 60%",
-        end:"bottom 30%"
-      }
-    })
-    gsap.from(".line", {
-      x:-100,
-      duration:1,
-      opacity:0,
-      stagger:1,
-      scrollTrigger:{
-        trigger:".line",
-        scroll:'body',
-        scrub:2,
-        start:"top 60%",
-        end:"bottom 50%"
-      }
-    })
-    gsap.from(".aboutdetails h1", {
-      x:-100,
-      duration:0.7,
-      opacity:0,
-      scrollTrigger:{
-        trigger:".aboutdetails h1",
-        scroll:'body',
-        scrub:2,
-        start:"top 50%",
-        end:"bottom 50%"
-      }
-    })
-    gsap.from(".aboutdetails ul", {
-      y:100,
-      duration:0.7,
-      opacity:0,
-      scrollTrigger:{
-        trigger:".aboutdetails ul",
-        scroll:'body',
-        scrub:2,
-        start:"top 50%",
-        end:"bottom 50%"
-      }
-    })
-    gsap.from(".rightabout", {
-      x:100,
-      duration:0.7,
-      opacity:0,
-      scrollTrigger:{
-        trigger:".rightabout",
-        scroll:'body',
-        scrub:2,
-        start:"top 50%",
         end:"bottom 50%"
       }
     })
    
   })
+  
   return (
-    <div id='about'>
-      <div className='leftabout'>
-        <div className='circle-line'>
-          <div className='circle'></div>
-          <div className='line'></div>
-          <div className='circle'></div>
-          <div className='line'></div>
-          <div className='circle'></div>
-        </div>
-        <div className='aboutdetails'>
-          <div className='personalinfo'>
-            <h1>Personal Info</h1>
-            <ul>
-              <li><span>NAME </span>: ASHVINI TAYDE</li>
-              <li><span>AGE </span>: 22 YEARS</li>
-              <li><span>GENDER </span>: FEMALE</li>
-              <li><span>LANGUAGE </span>: English,Hindi,M</li>
+    <section id="about" className="about-section">
+      <div className="about-header">
+        <h2>
+          <span className="star">✦</span> About Me{" "}
+          <span className="star">✦</span>
+        </h2>
+        <p>Transforming ideas into digital experiences</p>
+      </div>
 
-
-            </ul>
-          </div>
-          <div className='educaton'>
-            <h1>EDUCATION</h1>
-            <ul>
-              <li><span>DEGREE  </span>:  BSC</li>
-              <li><span>BRANCH </span>: COMPUTER SCIENCE</li>
-              <li><span>CGPA </span>: 8.18</li>
-            </ul>
-          </div>
-          <div className='skill'>
-            <h1>SKILS</h1>
-            <ul>
-              <li>MERN STACK WEB DEVELOPER</li>
-              <li>JAVA</li>
-              <li>DSA</li>
-              <li>MYSQL,SQL</li>
-              <li>Git & Github</li>
-            </ul>
+      <div className="about-container">
+        {/* Left side text */}
+        <div className="about-text">
+          <h3>
+            Hello, I'm <span>Ashvini</span>
+          </h3>
+          <p>
+            I’m a Full Stack Web Developer with expertise in React JS, Next JS,
+            Node JS, and Tailwind CSS. Skilled in building responsive,
+            user-friendly web apps, integrating REST APIs, and optimizing
+            performance. Strong in JavaScript and database management with focus
+            on writing clean and maintainable code.
+          </p>
+          <div className="about-buttons">
+            <a href="/Ashvini.pdf" className="btn download">
+               Download CV
+            </a>
+            <a href="#projects" className="btn projects">
+              💻 View Projects
+            </a>
           </div>
         </div>
 
+        {/* Right side image */}
+        <div className="about-image">
+          <img src={me} alt="profile" />
+        </div>
       </div>
-      <div className='rightabout'>
-        <Card title="MERN STACK WEB DEVELOPER" image={mern}/>
-        <Card title="JAVA DEVELOPER" image={java}/>
-        <Card title="DATA STRUCTURES & ALGORITHMS" image={dsa}/>
+    </section>
+  );
+};
 
-      </div>
-
-    </div>
-  )
-}
-
-export default About
+export default About;
