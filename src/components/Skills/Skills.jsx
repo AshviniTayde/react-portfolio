@@ -1,26 +1,35 @@
 import React from "react";
 import "./Skills.css";
+import html from "../../assets/html.png";
+
 import jsLogo from "../../assets/js.png";
 import tsLogo from "../../assets/ts.png";
 import reactLogo from "../../assets/react.png";
 import nextLogo from "../../assets/next.webp";
 import reduxLogo from "../../assets/redux.png";
 import tailwindLogo from "../../assets/tailwind.png";
-import gsapLogo from "../../assets/redux.png";
+import gsapLogo from "../../assets/gsap.png";
 import bootstrapLogo from "../../assets/bootstrap.svg";
 import nodeLogo from "../../assets/node.png";
 import express from "../../assets/express.png";
+import restfulapi from "../../assets/restfulApi.png";
+
+
 
 import nestLogo from "../../assets/nest.svg";
 import mysql from '../../assets/mysql.svg';
 import postgress from '../../assets/postgreSQL.webp';
 import mongo from '../../assets/mongodb.svg';
-import git from '../../assets/git.png';
-import postman from '../../assets/postman.png';
 
-import github from '../../assets/github.jpeg';
+import git from '../../assets/git&github.png';
+import postman from '../../assets/postman.png';
+// import github from '../../assets/github.jpeg';
+
 import java from '../../assets/java.jpg';
 import python from '../../assets/python.png';
+import eclips from '../../assets/eclips.png';
+import vscode from '../../assets/vscode.png';
+
 
 import c from '../../assets/c.jpeg';
 
@@ -67,6 +76,7 @@ const Skills = () => {
         <div className="skills-column">
           <h3 className="skills-subtitle">FRONTEND</h3>
           <div className="skills-grid">
+            <div className="skill-item"><img src={html} alt="HTML" /><p>HTML</p></div>
             <div className="skill-item"><img src={jsLogo} alt="JS" /><p>JavaScript</p></div>
             <div className="skill-item"><img src={tsLogo} alt="TS" /><p>TypeScript</p></div>
             <div className="skill-item"><img src={reactLogo} alt="React" /><p>React</p></div>
@@ -86,6 +96,7 @@ const Skills = () => {
             <div className="skill-item"><img src={nodeLogo} alt="Node" /><p>Node.js</p></div>
             <div className="skill-item"><img src={nestLogo} alt="NestJS" /><p>NestJS</p></div>
             <div className="skill-item"><img src={express} alt="Express" /><p>Express</p></div>
+            <div className="skill-item"><img src={restfulapi} alt="RESTful API" /><p>RESTful API</p></div>
           </div>
 
           {/* Databases */}
@@ -104,9 +115,11 @@ const Skills = () => {
         <div className="skills-column">
           <h3 className="skills-subtitle">TOOLS</h3>
           <div className="skills-grid">
-            <div className="skill-item"><img src={git} alt="Git" /><p>Git</p></div>
-            <div className="skill-item"><img src={github} alt="GitHub" /><p>GitHub</p></div>
+            <div className="skill-item"><img src={git} alt="Git" /><p>Git & Github</p></div>
+            {/* <div className="skill-item"><img src={github} alt="GitHub" /><p>GitHub</p></div> */}
             <div className="skill-item"><img src={postman} alt="Postman" /><p>Postman</p></div>
+            <div className="skill-item"><img src={vscode} alt="VSCode" /><p>VSCode</p></div>
+            <div className="skill-item"><img src={eclips} alt="Eclipse" /><p>Eclipse</p></div>
           </div>
 
           {/* Languages */}
