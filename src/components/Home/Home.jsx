@@ -58,7 +58,11 @@ const Home = () => {
 
           {/* Buttons */}
           <div className="about-buttons">
-            <a href="/Ashvini.pdf" className="btn download">
+            <a href="/Ashvini_CV.pdf"
+              className="btn download"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Ashvini_Tayde_CV.pdf">
               Download CV
             </a>
             <a href="#projects" className="btn projects">

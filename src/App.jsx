@@ -13,7 +13,6 @@ function App() {
   return (
     <>
      <Background/>
-
      <Nav/>
      <Home/>
      <About/>
